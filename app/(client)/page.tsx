@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { AnnouncementCard } from '@/components/public/AnnouncementCard'
+import { BudgetDonutChart } from '@/components/public/BudgetDonutChart'
 import { ImageCarousel } from '@/components/public/ImageCarousel'
 import { MotionBlock, MotionItem } from '@/components/public/Motion'
 import { NewsCard } from '@/components/public/NewsCard'
@@ -325,7 +326,7 @@ export default async function HomePage() {
             </div>
           </div>
           <Card className="overflow-hidden rounded-[2rem] border-emerald-900/10 bg-white p-3 shadow-lg shadow-emerald-900/10">
-            <Image src={copy('home.budget.imageUrl')} alt={copy('home.budget.imageAlt')} width={760} height={560} className="h-auto w-full rounded-[1.5rem]" />
+            <BudgetDonutChart items={budgetItems} />
           </Card>
         </div>
       </MotionBlock>
