@@ -103,7 +103,7 @@ export default async function HomePage() {
                   className="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
                 />
               </Card>
-              <Card className="absolute -bottom-6 left-6 right-6 border-emerald-900/10 bg-white/95 shadow-xl shadow-emerald-900/15 backdrop-blur md:left-auto md:w-80">
+              <Card className="absolute -bottom-6 left-6 right-6 md:left-auto md:w-80 border-emerald-900/10 bg-white/95 shadow-xl shadow-emerald-900/15 backdrop-blur max-md:relative max-md:bottom-0 max-md:left-0 max-md:right-0 max-md:mt-4">
                 <CardContent className="p-5">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Pusat Layanan Desa</p>
                   <p className="mt-2 text-sm leading-6 text-emerald-950/70">
@@ -199,7 +199,7 @@ export default async function HomePage() {
       </MotionBlock>
 
       <MotionBlock className="mx-auto max-w-7xl px-4 py-20">
-        <Card className="overflow-hidden rounded-[2rem] border-emerald-900/10 bg-emerald-900 text-white shadow-xl shadow-emerald-900/15">
+        <Card className="overflow-hidden rounded-[2rem] border-emerald-900/10 bg-[radial-gradient(circle_at_top_right,rgba(132,204,22,0.15),transparent_32rem)] bg-emerald-900 text-white shadow-xl shadow-emerald-900/15">
           <CardContent className="grid gap-8 p-8 md:grid-cols-[0.72fr_1.28fr] md:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.24em] text-lime-200">{copy('home.welcome.eyebrow')}</p>
@@ -207,7 +207,7 @@ export default async function HomePage() {
             </div>
             <div>
               <p className="text-xl font-bold text-white">{copy('home.welcome.heading')}</p>
-              <p className="mt-4 leading-8 text-emerald-50/85">{copy('home.welcome.body')}</p>
+              <p className="mt-4 leading-8 text-emerald-100">{copy('home.welcome.body')}</p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button asChild className="rounded-full bg-white text-emerald-900 hover:bg-emerald-50">
                   <Link href="/profil">Profil desa</Link>

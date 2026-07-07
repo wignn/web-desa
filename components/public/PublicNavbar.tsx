@@ -49,10 +49,14 @@ export function PublicNavbar() {
           </Button>
         </div>
       </nav>
-      <div className="border-t border-emerald-900/10 bg-white/90 lg:hidden">
-        <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 text-sm font-medium text-emerald-900">
+      <div className="relative border-t border-emerald-900/10 bg-white/90 lg:hidden">
+        {/* Horizontal scroll gradient fade masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white/90 to-transparent pointer-events-none z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white/90 to-transparent pointer-events-none z-10" />
+
+        <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 text-sm font-medium text-emerald-900 scrollbar-none">
           {publicRoutes.map((route) => (
-            <Link key={route.href} href={route.href} className="shrink-0 rounded-full bg-emerald-50 px-3 py-2 hover:bg-emerald-100">
+            <Link key={route.href} href={route.href} className="shrink-0 rounded-full bg-emerald-50 px-3.5 py-2 hover:bg-emerald-100 transition-colors">
               {route.label}
             </Link>
           ))}
