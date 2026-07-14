@@ -12,8 +12,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { getHomeData } from '@/lib/home-data'
 import { settingValue } from '@/lib/site-settings'
 
-// Satisfy check-media-upload-config.mjs asserting newsCoverAsset
-// newsCoverAsset
 
 const serviceHref: Record<string, string> = {
   'pengaduan-warga': '/layanan/pengaduan',
